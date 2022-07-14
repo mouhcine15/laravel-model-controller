@@ -1,0 +1,12 @@
+main ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+main ul li {
+  list-style: none;
+  margin: 20px;
+  background-color: bisque;
+  padding: 10px;
+}
+
