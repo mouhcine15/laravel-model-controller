@@ -1,18 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <ul>
-        @foreach ($movie as $movies)
-            <li>
-                {{$movies->title}}
-            </li>   
-        @endforeach
-    </ul>
-</body>
-</html>
+@extends('templates.base')
+
+@section('pageTitle', 'Movies')
+
+@section('pageMain')
+    <main>
+        <ul>
+            @foreach ($movie as $movies)
+                <li>
+                    <div>
+                        {{$movies->title}}
+                    </div>
+                    <div>
+                        {{$movies->original_title}}
+                    </div>
+                    <div>
+                        {{$movies->nationality}}
+                    </div>
+                    <div>
+                        {{$movies->date}}
+                    </div>
+                    <div>
+                        {{$movies->vote}}
+                    </div>
+                </li>   
+            @endforeach
+        </ul>
+    </main> 
+@endsection
